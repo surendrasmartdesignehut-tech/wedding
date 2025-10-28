@@ -122,8 +122,8 @@ ol {
 }
 
 .spad {
-  padding-top: 100px;
-  padding-bottom: 100px;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 .text-white h1,
@@ -141,14 +141,18 @@ ol {
 
 /* buttons */
 .primary-btn {
-  display: inline-block;
-  font-size: 14px;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 600;
-  padding: 12px 42px 10px;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 4px;
+    display: inline-block;
+    font-size: 14px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    padding: 12px 30px 10px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #3b3e33;
+    transition: all 0.5s;
+}
+.primary-btn:hover {
   background: #a3a698;
 }
 
@@ -444,9 +448,9 @@ ol {
 }
 
 .hero__text {
-  max-width: 680px;
-  text-align: center;
-  margin-left: 185px;
+    max-width: 680px;
+    text-align: center;
+    margin: 0 auto;
 }
 .hero__text h5 {
   color: #ffffff;
@@ -473,7 +477,9 @@ ol {
 .services {
   padding-bottom: 30px;
 }
-
+.services .section-title img {
+	margin-bottom: 20px;
+}
 .services__item {
   text-align: center;
   padding: 40px 30px 30px;
@@ -504,7 +510,7 @@ ol {
   Features
 -----------------------*/
 .features {
-  padding-top: 0;
+  /* padding-top: 0; */
   overflow: hidden;
 }
 .features .section-title {
@@ -632,6 +638,102 @@ ol {
 
 .load__more {
   padding-top: 30px;
+}
+
+/*---------------------
+  FAQs
+-----------------------*/
+.faq-sec .accordion .btn {
+  font-size: 18px;
+  color: #000;
+  outline: none;
+  box-shadow: none;
+  padding: 0;
+}
+.faq-sec .accordion .btn:hover, .faq-sec .accordion .btn-link.focus, .faq-sec .accordion .btn-link:focus {
+  text-decoration: none !important;
+  color: rgb(118, 123, 103);
+}
+.faq-sec h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+.faq-sec .accordion .card {
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    border-radius: 0px;
+    background-color: transparent;
+}
+.faq-sec .accordion .card-header {
+    background-color: transparent;
+    padding: 10px 15px;
+}
+.faq-sec {
+    position: relative;
+    z-index: 1;
+    background-attachment: fixed;
+}
+.faq-sec::before {
+    content: '';
+    background-color: rgb(59 62 51 / 55%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.faq-sec .section-title h2 {
+    color: #fff;
+}
+.faq-sec .section-title img {
+    filter: brightness(2.5);
+}
+.faq-sec .accordion {
+    background-color: hsl(0deg 0% 100% / 87%);
+    padding: 25px 25px 17px;
+}
+.faq-sec .accordion .card-body {
+    padding: 15px 15px;
+}
+
+/*---------------------
+  join a wedding
+-----------------------*/
+.join-sec .section-title, .join-sec .section-title p {
+    margin-bottom: 0;
+}
+.join-sec .section-title h2 {
+    margin-bottom: 20px;
+}
+.join-sec .section-title img {
+    margin-bottom: 28px;
+}
+.join-sec {
+    background-color: #a3a698;
+}
+.join-sec * {
+  color: #fff !important;
+}
+.join-sec .primary-btn {
+  background-color: #3b3e33;
+}
+.join-sec .primary-btn:hover {
+  background-color: #fff;
+  color: #000 !important;
+}
+
+/*---------------------
+  Instagram
+-----------------------*/
+.instagram__item {
+    width: 100%;
+    padding: 0 12px;
+}
+.instagram__item a {
+    display: block;
+    border: 1px solid #c7c7c7;
+    padding: 10px;
 }
 
 /*---------------------
@@ -790,9 +892,8 @@ ol {
   Latest
 -----------------------*/
 .latest {
-  padding-bottom: 70px;
+    padding-bottom: 45px;
 }
-
 .latest__item {
   margin-bottom: 30px;
 }
@@ -1046,11 +1147,6 @@ ol {
 /*---------------------
   About
 -----------------------*/
-.about {
-  padding-bottom: 65px;
-  padding-top: 70px;
-}
-
 .about__text {
   padding-top: 70px;
 }
@@ -1058,32 +1154,58 @@ ol {
   color: #111111;
   line-height: 48px;
   text-transform: uppercase;
-  margin-bottom: 34px;
+  margin-bottom: 18px;
 }
 .about__text p {
-  font-weight: 300;
   line-height: 26PX;
 }
-.about__text img {
-  padding-top: 15px;
-}
-
 .about__pic {
   text-align: right;
 }
-
+.about__text a.primary-btn {
+    margin-top: 10px;
+}
 .about__counter {
   padding-top: 70px;
   border-top: 1px solid #e1e1e1;
   margin-top: 30px;
+}
+.about, .features, .latest, .instagram-sec {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.about::before, .about::after, .features::before, .features::after, .latest::before, .latest::after, .instagram-sec::before, .instagram-sec::after {
+  content: '';
+  height: 170px;
+  width: 170px;
+  position: absolute;
+  top: 0;
+  left: -15px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.about::before, .features::before, .latest:before, .instagram-sec:before {
+  background-image: url(../images/icon_1-1.png);
+}
+.about::after, .features::after, .latest::after, .instagram-sec::after {
+  left: auto;
+  right: -15px;
+  background-image: url(../images/icon_1.png);
+}
+.about__text img {
+    width: 160px;
+    float: right;
 }
 
 /*---------------------
   Testimonial
 -----------------------*/
 .testimonial {
-  background: #f6f7f1;
-  padding-bottom: 40px;
+    background: #f6f7f1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .testimonial__item__text {
@@ -1134,15 +1256,15 @@ ol {
   padding-top: 12px;
 }
 .testimonial__item__author__text h5 {
-  color: #111111;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
+	color: #111111;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+	font-size: 20px;
+	font-weight: 600;
 }
-.testimonial__item__author__text .rating span {
-  font-size: 13px;
-  color: #efc873;
-  margin-right: -4px;
+.testimonial__item__author__text h6 {
+  color: #3b3e33;
 }
 
 .testimonial__carousel .col-lg-6 {
@@ -1153,8 +1275,8 @@ ol {
   width: auto;
 }
 .testimonial__carousel.owl-carousel .owl-dots {
-  text-align: center;
-  padding-top: 85px;
+    text-align: center;
+    padding-top: 35px;
 }
 .testimonial__carousel.owl-carousel .owl-dots button {
   display: inline-block;
@@ -1499,26 +1621,45 @@ ol {
   line-height: 0;
 }
 
-.blog__item__pic__slider {
+.blog__item__pic__slider, .instagram__carousel {
   overflow: hidden;
 }
-.blog__item__pic__slider.owl-carousel .owl-nav button {
-  font-size: 26px;
-  color: #444444;
-  height: 45px;
-  width: 45px;
-  background: #ffffff;
-  border-radius: 50%;
-  line-height: 50px;
-  text-align: center;
-  position: absolute;
-  left: -18.5px;
-  top: 50%;
-  margin-top: -22.5px;
+.blog__item__pic__slider.owl-carousel .owl-nav button, .instagram__carousel.owl-carousel .owl-nav button {
+    font-size: 15px;
+    color: #fff;
+    height: 38px;
+    width: 38px;
+    background: #3b3e33;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -22.5px;
+}
+.blog__item__pic__slider.owl-carousel .owl-nav button:hover, .instagram__carousel.owl-carousel .owl-nav button:hover {
+  background-color: #a3a698;
 }
 .blog__item__pic__slider.owl-carousel .owl-nav button.owl-next {
   left: auto;
   right: -18.5px;
+}
+.instagram__carousel .arrow_carrot-left:before {
+    content: "\f053";
+    --_fa-family: var(--fa-family, var(--fa-style-family, "Font Awesome 7 Free"));
+    font-family: var(--_fa-family);
+    font-weight: var(--fa-style, 900);
+}
+.instagram__carousel .arrow_carrot-right:before {
+    content: "\f054";
+    --_fa-family: var(--fa-family, var(--fa-style-family, "Font Awesome 7 Free"));
+    font-family: var(--_fa-family);
+    font-weight: var(--fa-style, 900);
+}
+.instagram__carousel.owl-carousel .owl-nav .owl-next {
+    right: 0;
+    left: auto;
 }
 
 .pagination__option {
@@ -1944,10 +2085,6 @@ ol {
   .header__right__search {
     padding-left: 10px;
   }
-
-  .hero__text {
-    margin-left: 150px;
-  }
 }
 /* Tablet Device = 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1966,11 +2103,6 @@ ol {
 
   .header__menu ul li {
     margin-right: 15px;
-  }
-
-  .hero__text {
-    max-width: initial;
-    margin-left: 0;
   }
 
   .filter__controls li {
@@ -2086,11 +2218,6 @@ ol {
 
   .search-model-form input {
     width: 100%;
-  }
-
-  .hero__text {
-    max-width: initial;
-    margin-left: 0;
   }
 
   .filter__controls li {

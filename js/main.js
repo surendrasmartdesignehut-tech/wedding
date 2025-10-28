@@ -88,6 +88,29 @@
     });
 
     /*------------------
+        Instagram Slider
+    --------------------*/
+    $(".instagram__carousel").owlCarousel({
+        loop: true,
+        margin: 0,
+        items: 3,
+        dots: false,
+        smartSpeed: 1200,
+        autoHeight: false,
+        nav: true,
+        navText: ["<span class='arrow_carrot-left'></span>","<span class='arrow_carrot-right'></span>"],
+        autoplay: true,
+        responsive: {
+            768: {
+                items: 3
+            },
+            320: {
+                items: 1
+            }
+        }
+    });
+
+    /*------------------
         Testimonial Slider
     --------------------*/
     $(".testimonial__carousel").owlCarousel({
