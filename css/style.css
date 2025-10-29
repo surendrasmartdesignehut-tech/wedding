@@ -110,7 +110,7 @@ ol {
 }
 .section-title h2 {
   color: #111111;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
@@ -141,20 +141,20 @@ ol {
 
 /* buttons */
 .primary-btn {
-    display: inline-block;
-    font-size: 14px;
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 600;
-    padding: 12px 30px 10px;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background: #3b3e33;
-    transition: all 0.5s;
-    text-align: center;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 14px 30px;
+	color: #fff;
+	text-transform: uppercase;
+	background: #f0274b;
+	transition: all 0.5s;
+	text-align: center;
+	line-height: normal;
+	border-radius: 85px;
 }
 .primary-btn:hover {
-  background: #a3a698;
+  background: #13176e;
 }
 
 .site-btn {
@@ -315,7 +315,10 @@ ol {
 }
 
 .header__logo {
-  padding: 36px 0;
+    padding: 15px 0;
+}
+.header__logo a img {
+    width: 160px;
 }
 .header__logo a, .footer__logo a {
   display: inline-block;
@@ -326,8 +329,8 @@ ol {
 }
 
 .header__menu {
-  text-align: center;
-  padding: 39px 0;
+    text-align: center;
+    padding: 54px 0;
 }
 .header__menu ul li {
   list-style: none;
@@ -404,8 +407,8 @@ ol {
 }
 
 .header__right {
-  text-align: right;
-  padding: 30px 0;
+    text-align: right;
+    padding: 45px 0;
 }
 
 .header__right__social {
@@ -511,11 +514,7 @@ ol {
   Features
 -----------------------*/
 .features {
-  /* padding-top: 0; */
   overflow: hidden;
-}
-.features .section-title {
-  margin-bottom: 30px;
 }
 
 .filter__controls {
@@ -667,7 +666,7 @@ ol {
   box-shadow: none;
   padding: 0;
 }
-.faq-sec .accordion .btn:hover, .faq-sec .accordion .btn-link.focus, .faq-sec .accordion .btn-link:focus {
+.accordion .btn:hover, .accordion .btn-link.focus, .accordion .btn-link:focus {
   text-decoration: none !important;
   color: rgb(118, 123, 103);
 }
@@ -681,7 +680,7 @@ ol {
     border-radius: 0px;
     background-color: transparent;
 }
-.faq-sec .accordion .card-header {
+.faq-sec .accordion .card-header, .faq-inner .card-header {
     background-color: transparent;
     padding: 10px 15px;
 }
@@ -712,6 +711,36 @@ ol {
 }
 .faq-sec .accordion .card-body {
     padding: 15px 15px;
+}
+.faq-inner .card-header {
+	padding: 0;
+}
+.faq-inner .card-header .btn {
+	font-weight: 600;
+	padding: 20px 25px;
+	color: #000;
+	font-family: "Raleway", sans-serif;
+	box-shadow: none;
+}
+.faq-inner .card {
+	box-shadow: 0px 2px 17px 0 rgb(0 0 0 / 10%);
+	background-color: #fff;
+	border: none;
+	margin-bottom: 20px;
+}
+.faq-inner .card-body {
+	line-height: 1.6;
+}
+.faq-inner h3 {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.faq-inner .accordion {
+	margin-bottom: 45px;
+}
+.faq-inner .accordion:last-child {
+	margin-bottom: 0px;
 }
 
 /*---------------------
@@ -966,8 +995,36 @@ ol {
   Footer
 -----------------------*/
 .footer {
-  background: #3b3e33;
-  padding-top: 65px;
+    background: #060832;
+    padding: 60px 0 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.footer:before {
+    background-image: url(../images/icon_3.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    content: "";
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    z-index: -1;
+}
+.footer__logo a {
+    filter: brightness(2);
+    width: 200px;
+    margin: auto;
+    display: block;
+}
+.footer__logo p {
+    margin: 20px 0;
+    font-weight: 600;
+    color: #fff;
 }
 
 .footer__top {
@@ -1037,31 +1094,62 @@ ol {
     display: inline-block;
     height: 42px;
     width: 42px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #f0274b;
     border-radius: 50%;
     text-align: center;
     line-height: 44px;
     margin-right: 6px;
 }
+.footer__social a:hover {
+  background: #13176e;
+  color: #fff !important;
+}
 .footer__social a:last-child {
   margin-right: 0;
 }
-
-.footer__logo {
-  margin-bottom: 23px;
+.footer__logo a img {
+    filter: brightness(2);
 }
-.footer__logo a {
-  display: inline-block;
-  color: #fff;
+.footer__social {
+    margin: 0 0 22px;
+}
+.box ul {
+    display: inline-flex;
+    list-style: none;
+}
+.box ul li {
+    padding: 0 15px;
+    font-size: 15px;
+}
+.box1, .box2 {
+  margin-bottom: 20px;
+}
+.box1, .box3 {
+    background-image: linear-gradient(90deg, transparent, #0e1264, transparent);
+    padding: 10px 0;
+}
+.box2 ul li {
+    border-right: 1px solid #fff;
+    line-height: 1;
+}
+.box2 ul li:last-child {
+  border-right: none;
+}
+.box ul li i {
+    color: #f0274b;
+    font-size: 20px;
+    vertical-align: middle;
+    margin-right: 6px;
 }
 
 .footer__widget {
   margin-bottom: 18px;
 }
 .footer__widget h5 {
-  color: #ffffff;
-  text-transform: uppercase;
-  margin-bottom: 28px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 20px;
 }
 .footer__widget ul li {
     list-style: none;
@@ -1085,7 +1173,7 @@ ol {
 
 .footer__copyright__text {
   color: #ffffff;
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 0;
   letter-spacing: 0.5px;
   text-align: center;
@@ -1123,14 +1211,12 @@ ol {
   font-size: 14px;
   color: #ffffff;
 }
-ul.quick_list {
-    column-count: 2;
-}
 .footer a {
   color: #fff;
+  transition: all 0.5s;
 }
 .footer a:hover {
-  color: #a3a698;
+  color: #f0274b;
 }
 
 /*---------------------
@@ -1275,9 +1361,6 @@ ul.quick_list {
 	margin-bottom: 8px;
 	font-size: 20px;
 	font-weight: 600;
-}
-.testimonial__item__author__text h6 {
-  color: #3b3e33;
 }
 
 .testimonial__carousel .col-lg-6 {
